@@ -1,51 +1,50 @@
 Общее положения
-1. Советник одновременно торгует все major forex пары (EURUSD,GBPUSD, AUDUSD, NZDUSD, USDCAD, USDJPY, USDCHF) на том временном периоде, на котором установлен на график.
-2. Советник должен оповещать о входе в сделку и о выходе сигналом в торговый терминал (MT5). 
-В том числе на мобильном устройстве.
-3. Запрет на торговлю за 1 час до новостей и 2 часа после. 
-При наличии открытых позиций, советник должен их закрыть.
+- [x] 1. Советник одновременно торгует все major forex пары (EURUSD,GBPUSD, AUDUSD, NZDUSD, USDCAD, USDJPY, USDCHF) на том временном периоде, на котором установлен на график.
+- [x] 2. Советник должен оповещать о входе в сделку и о выходе сигналом в торговый терминал (MT5). В том числе на мобильном устройстве.
+- [x] 3. Запрет на торговлю за 1 час до новостей и 2 часа после. 
+- [x] 3.1 При наличии открытых позиций, советник должен их закрыть.
 
 Список новостей из Forexfactory, USD:
-Fed Chair Powell Speaks
-Fed Chair Powell Testifies
-Federal Funds Rate
-FOMC Enocomic Projections
-FOMC Meeting Minutes
-FOMC Statement
-FOMC Press Conference
-FOMC Member Waller Speaks
-Prelim GDP q/q
-Advance GDP q/q
-Final GDP q/q
+- [x] Fed Chair Powell Speaks = Fed Chair Powell Speech
+- [x] Fed Chair Powell Testifies = Fed Chair Powell Testimony
+- [x] Federal Funds Rate = Fed Interest Rate Decision
+- [x] FOMC Enocomic Projections = FOMC Economic Projections
+- [x] FOMC Meeting Minutes = FOMC Minutes
+- [x] FOMC Statement = FOMC Statement
+- [x] FOMC Press Conference = FOMC Press Conference
+- [x] FOMC Member Waller Speaks = Fed Governor Waller Speech
+- [x] Prelim GDP q/q = GDP q/q
+- [x] Advance GDP q/q = GDP q/q
+- [x] Final GDP q/q = GDP q/q
 Treasury Currency Report
 Presidential Election
 Congressional Elections
-Jackson Hole Symposium
+- [x] Jackson Hole Symposium = Jackson Hole Economic Symposium
 
 Список новостей из Forexfactory, EUR:
-Monetary Policy Statement
-ECB Press Conference
-Main Refinancing Rate
-Euro Summit
+- [x] Monetary Policy Statement = ECB Monetary Policy Statement
+- [x] ECB Press Conference = ECB Monetary Policy Press Conference
+- [x] Main Refinancing Rate = ECB Interest Rate Decision
+- [x] Euro Summit = EU Leaders Summit
 European Parliamentary Elections
 French Parliamentary Elections
 
 Список новостей из Forexfactory, GBP:
 Monetary Policy Summary
-MPC Official Bank Rate Votes
-Official Bank Rate
+- [x] MPC Official Bank Rate Votes = BoE MPC Meeting Minutes
+- [x] Official Bank Rate = BoE Interest Rate Decision
 GDP m/m
-BOE Monetary Policy Report
-BOE Gov Bailey Speaks
+- [x] BOE Monetary Policy Report = BoE Monetary Policy Report
+- [x] BOE Gov Bailey Speaks = BoE Governor Bailey Speech
 Parliamentary Elections
 
-4. Если после указанных выше новостей получили 1Ч «свечу» размером 60 пунктов и выше, советник не торгует до следующего открытия Лондона, т.е. следующего дня (8:00 UTC+0 или 9:00 GMT+1)
-5. 1 стоплосс в день по каждой торгуемой паре.
+- [x] 4. Если после указанных выше новостей получили 1Ч «свечу» размером 60 пунктов и выше, советник не торгует до следующего открытия Лондона, т.е. следующего дня (8:00 UTC+0 или 9:00 GMT+1)
+- [x] 5. 1 стоплосс в день по каждой торгуемой паре.
 Пример: по паре AUDUSD сделка закрылась по стоплоссу, советник сегодня больше не открывает никаких позиций по данной паре до следующего дня открытия Лондона. По всем остальным парам которые не словили стоплосс, советник продолжает торговать.
-6. По каждой паре может быть открыта только одна сделка одновременно, не ограниченное количество раз за день (при условии что не словили стоплосс)
-7. Время торгов начинается каждый день с открытия Лондонской сессии (9:00 GMT+1) до 22:00 (GMT+1). 
-В 22:00 все сделки советник должен закрыть.
-Исключение составляет пятница, где советник торгует с Лондонской сессии (9:00 GMT+1) до 18:00 GMT+1). При наступлении 18:00 советник должен закрыть все сделки.
+- [x] 6. По каждой паре может быть открыта только одна сделка одновременно, не ограниченное количество раз за день (при условии что не словили стоплосс)
+- [x] 7. Время торгов начинается каждый день с открытия Лондонской сессии (9:00 GMT+1) до 22:00 (GMT+1). 
+- [ ] 7.1 В 22:00 все сделки советник должен закрыть.
+- [x] Исключение составляет пятница, где советник торгует с Лондонской сессии (9:00 GMT+1) до 18:00 GMT+1). При наступлении 18:00 советник должен закрыть все сделки.
 9. Всё техническое задание подвязано к платным индикаторам с сайта fxssi.net, соответственно советник должен без проблем работать с данными индикаторами
 10. Все возникшие баги, не точности в работе которые требуют правок, должны быть устранены для того, чтобы ТЗ считалось выполненным
 
@@ -53,7 +52,7 @@ Parliamentary Elections
 Понедельник, Вторник
 1. Торгуются только 2 пары: GBPUSD и EURUSD
 2. Сигнал на открытие сделки: Снятие уровней SLC по евро и фунту, затем вход в сделку в противоположную сторону. Если по евро сняли уровень, а по фунту нет - советник не входит в сделку
-3. Стоплосс - 15 пунктов, Тейкпрофит 30 (RR 2:1), размер лота - 0.5% от баланса (например если баланс 1000, размер лота будет составлять 0.03
+- [x] 3. Стоплосс - 15 пунктов, Тейкпрофит 30 (RR 2:1), размер лота - 0.5% от баланса (например если баланс 1000, размер лота будет составлять 0.03
 
 Среда
 1. Торгуется только GBPUSD и EURUSD
