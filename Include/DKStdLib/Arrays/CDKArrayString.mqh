@@ -9,6 +9,7 @@
 class CDKArrayString : public CArrayString {
 public:
   int                     CDKArrayString::SaveToArray(string& _arr[]);
+  int                     CDKArrayString::SaveToHashSet(CHashSet<string>& _set);
 };
 
 int CDKArrayString::SaveToArray(string& _arr[]){
@@ -19,3 +20,12 @@ int CDKArrayString::SaveToArray(string& _arr[]){
     
   return size;
 }
+
+int CDKArrayString::SaveToHashSet(CHashSet<string>& _set){
+  int size = Total();
+  for(int i=0;i<size;i++)
+    _set.Add(At(i));
+    
+  return _set.Count();
+}
+
