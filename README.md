@@ -3,12 +3,14 @@
 Торговый советник для MetaTrader 5, который торгует с применением кастомных индикаторов от FSSI
 
 * Created by Denis Kislitsyn | denis@kislitsyn.me | [kislitsyn.me](https://kislitsyn.me/personal/algo)
-* Version: 1.01
+* Version: 1.02
 
 ![Layout](img/UM001.%20Layout.png)
 
 ## Что нового?
 ```
+1.02: [*] Исправлен поиск большой свечи после новостей - теперь поиск только в текущем дне
+      [+] Вывод в лог всех загруженных фильтров новостей
 1.01: [+] Добавлен сетап COMBINED
 1.00: First version
 ```
